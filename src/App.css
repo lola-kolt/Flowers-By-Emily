@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #F3F3FB;
+    margin: 0;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #8A9B6E;
+}
+.link {
+    padding: 10px;
+    color: #F3F3FB;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.link:hover {
+    background-color: #B99274;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home {
+    background-image: url('./plant3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 95vh;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+    font-size: 60px;
+    color: #8A9B6E;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heading {
+    display: flex;
+    justify-content: center;
+    font-family: 'Great Vibes', cursive;
 }
+
+.text {
+    padding: 20px;
+    text-align: center;
+    font-size: 34px;
+    letter-spacing: 1.5px;
+    color: #B99274;
+    font-weight: 300;
+}
+
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    object-fit: cover;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.flower-wrap, .hours-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.flower-card {
+    width: 400px;
+    flex: 1;
+    margin: 5px;
+}
+
+.btn {
+    background-color: #8A9B6E;
+    color: #F3F3FB;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #B99274;
+}
+
+.product-name, .price {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+    margin: 0;
+    padding: 10px;
+    color: #8A9B6E;
+    font-weight: 500;
+}
+
+.price {
+    padding: 0 0 10px 10px;
+}
+
+.hours {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+p {
+    margin: 18px;
+    color: #354733;
+    font-weight: 600;
+}
+
+.hours-wrap > h3 {
+    color: #8A9B6E;
+    font-size: 35px;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.flex {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-page {
+    background-image: url('./plant8.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+.btn-submit {
+    background-color: #8A9B6E;
+    border: none;
+    padding: 10px;
+    color: #F3F3FB;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #354733;
+}
+input {
+    padding: 10px;
+}
+/* media */
+
+@media all and (min-width: 360px) and (max-width: 720px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .heading {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .flower-wrap {
+        width: 45%;
+    }
+
+    .flower-card {
+        width: 100%;
+    }
+
+    .product-name, .price {
+        
+        font-size: 18px;
+        margin: 0;
+        padding: 5px;
+        color: #8A9B6E;
+        font-weight: 500;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .contact-page {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hours-wrap > h3 {
+        font-size: 20px;
+    }
+
+    .working-hours > p {
+        color: #354733;
+        font-size: 18px;
+    }
+
+    .inputField{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    }
+
+    textarea {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+    input, textarea {
+        border: 2px solid #8A9B6E;
+    }
+
+}
+
+
+
+
