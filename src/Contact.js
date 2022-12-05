@@ -8,6 +8,7 @@ function Contact() {
             <div className='heading'>
                 <h1>Contact Us</h1>
             </div>
+            
             <div className='hours-wrap'>
                 <h3 className='heading'>Our Hours</h3>
                 

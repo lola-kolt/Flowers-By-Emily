@@ -23,12 +23,10 @@ nav {
 .link:hover {
     background-color: #B99274;
 }
-
 .container {
     display: flex;
     flex-direction: column;
 }
-
 .home {
     background-image: url('./plant3.jpg');
     background-repeat: no-repeat;
@@ -36,18 +34,15 @@ nav {
     background-size: cover;
     min-height: 95vh;
 }
-
 h1 {
     font-size: 60px;
     color: #8A9B6E;
 }
-
 .heading {
     display: flex;
     justify-content: center;
     font-family: 'Great Vibes', cursive;
 }
-
 .text {
     padding: 20px;
     text-align: center;
@@ -56,7 +51,6 @@ h1 {
     color: #B99274;
     font-weight: 300;
 }
-
 .product-container {
     display: flex;
     justify-content: space-around;
@@ -65,18 +59,23 @@ h1 {
     width: 100%;
     margin-top: 30px;
 }
-
-.flower-wrap, .hours-wrap {
+.flower-wrap {
     display: flex;
     flex-direction: column;
-}
-
-.flower-card {
-    width: 400px;
+    justify-content: center;
     flex: 1;
-    margin: 5px;
+    max-width: 20%;
 }
-
+.hours-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.flower-card {
+    flex: 1;
+    margin: 10px;
+}
 .btn {
     background-color: #8A9B6E;
     color: #F3F3FB;
@@ -86,12 +85,10 @@ h1 {
     font-size: 18px;
     cursor: pointer;
 }
-
 .btn:hover {
     background-color: #B99274;
 }
-
-.product-name, .price {
+.product-name, .price, .product-quote, .show {
     font-family: 'Great Vibes', cursive;
     font-size: 24px;
     margin: 0;
@@ -99,42 +96,51 @@ h1 {
     color: #8A9B6E;
     font-weight: 500;
 }
-
+.product-quote {
+    display: flex;
+    flex-wrap: wrap;
+}
 .price {
     padding: 0 0 10px 10px;
 }
-
+.show {
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 0 15px 15px 0;
+    border: 1px solid #8A9B6E;
+    cursor: pointer;
+    margin-left: 3px;
+}
+.show:hover {
+    background-color: #8A9B6E;
+    color: #F3F3FB;
+}
 .hours {
     display: flex;
     justify-content: center;
     padding: 30px 0;
 }
-
 p {
     margin: 18px;
     color: #354733;
     font-weight: 600;
 }
-
 .hours-wrap > h3 {
     color: #8A9B6E;
     font-size: 35px;
     letter-spacing: 1.5px;
     margin: 0;
 }
-
 .address {
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
-
 .flex {
     display:  flex;
     justify-content: center;
     align-items: center;
 }
-
 .contact-page {
     background-image: url('./plant8.jpg');
     background-repeat: no-repeat;
@@ -149,18 +155,72 @@ p {
     color: #F3F3FB;
     cursor: pointer;
 }
-
 .btn-submit:hover {
     background-color: #354733;
 }
 input {
     padding: 10px;
 }
+.about-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+}
+.about-content p {
+    font-size: 34px;
+    font-family: 'Great Vibes', cursive;
+    color: #8A9B6E;
+    letter-spacing: 2px;
+}
+
+.prev > button, .next > button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.whyUs {
+    background-image: url('https://images.unsplash.com/photo-1551001626-86e913f8baf7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGZsb3dlcnxlbnwwfDB8MHx3aGl0ZXw%3D&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 95vh;
+}
+
+.icon-slides {
+    width: 450px;
+    border-radius: 26px;
+    opacity: 0.7;
+}
+
+
 /* media */
+
+@media all and (min-width: 721px) and (max-width: 980px) {
+    .flower-wrap {
+        max-width: 33%;
+    }
+}
+
+
 
 @media all and (min-width: 360px) and (max-width: 720px) {
     h1 {
         font-size: 30px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .heading {
@@ -170,26 +230,30 @@ input {
 
     .product-container {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
         margin-top: 30px;
         flex-wrap: wrap;
     }
 
     .flower-wrap {
-        width: 45%;
+        max-width: 50%;
     }
-
     .flower-card {
-        width: 100%;
+        margin: 5px;
+        display: flex;
+        flex: 1;
     }
 
-    .product-name, .price {
-        
+    .product-name, .price {        
         font-size: 18px;
         margin: 0;
         padding: 5px;
         color: #8A9B6E;
         font-weight: 500;
+    }
+    .product-quote {
+        font-size: 16px;
+        padding: 5px;
     }
 
     .btn {
@@ -198,13 +262,6 @@ input {
 
     .text {
         font-size: 20px;
-    }
-
-    .contact-page {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     .hours-wrap > h3 {
@@ -233,8 +290,15 @@ input {
         border: 2px solid #8A9B6E;
     }
 
-}
+    .icon-slides {
+        width: 200px;
+    }
 
+    .about-content p {
+        font-size: 24px;
+    }
+
+}
 
 
 
